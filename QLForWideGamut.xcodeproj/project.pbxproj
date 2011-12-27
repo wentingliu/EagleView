@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04DCF31314A9FD3200ADFF95 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DCF31214A9FD3200ADFF95 /* QuickLook.framework */; };
+		04DCF31514A9FD3300ADFF95 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DCF31414A9FD3200ADFF95 /* ApplicationServices.framework */; };
+		04DCF31714A9FD3300ADFF95 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DCF31614A9FD3300ADFF95 /* CoreServices.framework */; };
+		04DCF31914A9FD3300ADFF95 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DCF31814A9FD3300ADFF95 /* CoreFoundation.framework */; };
+		04DCF31F14A9FD3300ADFF95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04DCF31D14A9FD3300ADFF95 /* InfoPlist.strings */; };
+		04DCF32114A9FD3300ADFF95 /* GenerateThumbnailForURL.c in Sources */ = {isa = PBXBuildFile; fileRef = 04DCF32014A9FD3300ADFF95 /* GenerateThumbnailForURL.c */; };
+		04DCF32314A9FD3300ADFF95 /* GeneratePreviewForURL.c in Sources */ = {isa = PBXBuildFile; fileRef = 04DCF32214A9FD3300ADFF95 /* GeneratePreviewForURL.c */; };
+		04DCF32514A9FD3300ADFF95 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 04DCF32414A9FD3300ADFF95 /* main.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04DCF30F14A9FD3200ADFF95 /* QLForWideGamut.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QLForWideGamut.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DCF31214A9FD3200ADFF95 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		04DCF31414A9FD3200ADFF95 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
+		04DCF31614A9FD3300ADFF95 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		04DCF31814A9FD3300ADFF95 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		04DCF31C14A9FD3300ADFF95 /* QLForWideGamut-Info.plist */ = {isa = PBXFileReference; path = "QLForWideGamut-Info.plist"; sourceTree = "<group>"; };
+		04DCF31E14A9FD3300ADFF95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04DCF32014A9FD3300ADFF95 /* GenerateThumbnailForURL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GenerateThumbnailForURL.c; sourceTree = "<group>"; };
+		04DCF32214A9FD3300ADFF95 /* GeneratePreviewForURL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GeneratePreviewForURL.c; sourceTree = "<group>"; };
+		04DCF32414A9FD3300ADFF95 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		04DCF32614A9FD3300ADFF95 /* QLForWideGamut-Prefix.pch */ = {isa = PBXFileReference; path = "QLForWideGamut-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04DCF30A14A9FD3200ADFF95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DCF31314A9FD3200ADFF95 /* QuickLook.framework in Frameworks */,
+				04DCF31514A9FD3300ADFF95 /* ApplicationServices.framework in Frameworks */,
+				04DCF31714A9FD3300ADFF95 /* CoreServices.framework in Frameworks */,
+				04DCF31914A9FD3300ADFF95 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04DCF30214A9FD3200ADFF95 = {
+			isa = PBXGroup;
+			children = (
+				04DCF31A14A9FD3300ADFF95 /* QLForWideGamut */,
+				04DCF31114A9FD3200ADFF95 /* Frameworks */,
+				04DCF31014A9FD3200ADFF95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04DCF31014A9FD3200ADFF95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04DCF30F14A9FD3200ADFF95 /* QLForWideGamut.qlgenerator */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04DCF31114A9FD3200ADFF95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04DCF31214A9FD3200ADFF95 /* QuickLook.framework */,
+				04DCF31414A9FD3200ADFF95 /* ApplicationServices.framework */,
+				04DCF31614A9FD3300ADFF95 /* CoreServices.framework */,
+				04DCF31814A9FD3300ADFF95 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04DCF31A14A9FD3300ADFF95 /* QLForWideGamut */ = {
+			isa = PBXGroup;
+			children = (
+				04DCF32014A9FD3300ADFF95 /* GenerateThumbnailForURL.c */,
+				04DCF32214A9FD3300ADFF95 /* GeneratePreviewForURL.c */,
+				04DCF32414A9FD3300ADFF95 /* main.c */,
+				04DCF31B14A9FD3300ADFF95 /* Supporting Files */,
+			);
+			path = QLForWideGamut;
+			sourceTree = "<group>";
+		};
+		04DCF31B14A9FD3300ADFF95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04DCF31C14A9FD3300ADFF95 /* QLForWideGamut-Info.plist */,
+				04DCF31D14A9FD3300ADFF95 /* InfoPlist.strings */,
+				04DCF32614A9FD3300ADFF95 /* QLForWideGamut-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		04DCF30B14A9FD3200ADFF95 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		04DCF30E14A9FD3200ADFF95 /* QLForWideGamut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DCF32914A9FD3300ADFF95 /* Build configuration list for PBXNativeTarget "QLForWideGamut" */;
+			buildPhases = (
+				04DCF30914A9FD3200ADFF95 /* Sources */,
+				04DCF30A14A9FD3200ADFF95 /* Frameworks */,
+				04DCF30B14A9FD3200ADFF95 /* Headers */,
+				04DCF30C14A9FD3200ADFF95 /* Resources */,
+				04DCF30D14A9FD3200ADFF95 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QLForWideGamut;
+			productName = QLForWideGamut;
+			productReference = 04DCF30F14A9FD3200ADFF95 /* QLForWideGamut.qlgenerator */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04DCF30414A9FD3200ADFF95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 04DCF30714A9FD3200ADFF95 /* Build configuration list for PBXProject "QLForWideGamut" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 04DCF30214A9FD3200ADFF95;
+			productRefGroup = 04DCF31014A9FD3200ADFF95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04DCF30E14A9FD3200ADFF95 /* QLForWideGamut */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04DCF30C14A9FD3200ADFF95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DCF31F14A9FD3300ADFF95 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		04DCF30D14A9FD3200ADFF95 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04DCF30914A9FD3200ADFF95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DCF32114A9FD3300ADFF95 /* GenerateThumbnailForURL.c in Sources */,
+				04DCF32314A9FD3300ADFF95 /* GeneratePreviewForURL.c in Sources */,
+				04DCF32514A9FD3300ADFF95 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04DCF31D14A9FD3300ADFF95 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04DCF31E14A9FD3300ADFF95 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04DCF32714A9FD3300ADFF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		04DCF32814A9FD3300ADFF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		04DCF32A14A9FD3300ADFF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QLForWideGamut/QLForWideGamut-Prefix.pch";
+				INFOPLIST_FILE = "QLForWideGamut/QLForWideGamut-Info.plist";
+				INSTALL_PATH = /Library/QuickLook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = qlgenerator;
+			};
+			name = Debug;
+		};
+		04DCF32B14A9FD3300ADFF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QLForWideGamut/QLForWideGamut-Prefix.pch";
+				INFOPLIST_FILE = "QLForWideGamut/QLForWideGamut-Info.plist";
+				INSTALL_PATH = /Library/QuickLook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = qlgenerator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04DCF30714A9FD3200ADFF95 /* Build configuration list for PBXProject "QLForWideGamut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DCF32714A9FD3300ADFF95 /* Debug */,
+				04DCF32814A9FD3300ADFF95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04DCF32914A9FD3300ADFF95 /* Build configuration list for PBXNativeTarget "QLForWideGamut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DCF32A14A9FD3300ADFF95 /* Debug */,
+				04DCF32B14A9FD3300ADFF95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04DCF30414A9FD3200ADFF95 /* Project object */;
+}
