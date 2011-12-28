@@ -49,7 +49,7 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
 
 
                 [firstRep drawInRect:rect];
-//                [@"QuickLook is using QLForWideGamut" drawInRect:rect withAttributes:nil];
+//                [@"QuickLook is using EagleView" drawInRect:rect withAttributes:nil];
                 
                 //This line sets the context back to what it was when we're done
                 [NSGraphicsContext restoreGraphicsState];

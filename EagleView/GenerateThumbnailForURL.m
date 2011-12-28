@@ -21,7 +21,7 @@ OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thum
             return noErr;
         }
         
-        // TODO: should choose approiate rep according maxSize
+        // TODO: should choose appropriate rep according maxSize
         NSBitmapImageRep *firstRep = [[image representations] objectAtIndex:0];
         
         if ([firstRep colorSpace] == [NSColorSpace deviceRGBColorSpace]) {
@@ -49,7 +49,7 @@ OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thum
                 
                 
                 [firstRep drawInRect:rect];
-                //                [@"QuickLook is using QLForWideGamut" drawInRect:rect withAttributes:nil];
+                //                [@"Q" drawInRect:rect withAttributes:nil];
                 
                 //This line sets the context back to what it was when we're done
                 [NSGraphicsContext restoreGraphicsState];

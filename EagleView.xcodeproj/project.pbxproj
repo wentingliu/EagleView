@@ -12,12 +12,12 @@
 		04DCF31714A9FD3300ADFF95 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DCF31614A9FD3300ADFF95 /* CoreServices.framework */; };
 		04DCF31914A9FD3300ADFF95 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DCF31814A9FD3300ADFF95 /* CoreFoundation.framework */; };
 		04DCF33114A9FE0F00ADFF95 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DCF33014A9FE0F00ADFF95 /* Cocoa.framework */; };
-		04DCF33D14AA141B00ADFF95 /* EagleView.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = 04DCF30F14A9FD3200ADFF95 /* EagleView.qlgenerator */; };
 		04DCF34914AAC8FF00ADFF95 /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCF34614AAC8FF00ADFF95 /* GeneratePreviewForURL.m */; };
 		04DCF34A14AAC8FF00ADFF95 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCF34714AAC8FF00ADFF95 /* GenerateThumbnailForURL.m */; };
 		04DCF34B14AAC8FF00ADFF95 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 04DCF34814AAC8FF00ADFF95 /* main.c */; };
 		04DCF35114AAC91400ADFF95 /* EagleView-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 04DCF34D14AAC91400ADFF95 /* EagleView-Prefix.pch */; };
 		04DCF35214AAC91400ADFF95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04DCF34E14AAC91400ADFF95 /* InfoPlist.strings */; };
+		04DCF35A14AACF4A00ADFF95 /* EagleView.qlgenerator in CopyFiles */ = {isa = PBXBuildFile; fileRef = 04DCF30F14A9FD3200ADFF95 /* EagleView.qlgenerator */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,7 +27,7 @@
 			dstPath = "${HOME}/Library/QuickLook/";
 			dstSubfolderSpec = 0;
 			files = (
-				04DCF33D14AA141B00ADFF95 /* EagleView.qlgenerator in CopyFiles */,
+				04DCF35A14AACF4A00ADFF95 /* EagleView.qlgenerator in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
