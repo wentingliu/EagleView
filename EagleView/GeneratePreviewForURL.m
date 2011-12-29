@@ -33,7 +33,6 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
             [firstRep setProperty:NSImageColorSyncProfileData withValue:profileData];
         }
         
-        // TODO: limit canvasSize to fit screen size        
         NSSize canvasSize = image.size;
         
         NSRect rect;
@@ -44,9 +43,8 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
             NSGraphicsContext* context = [NSGraphicsContext graphicsContextWithGraphicsPort:(void *)cgContext flipped:YES];
             if(context) {
                 //These two lines of code are just good safe programming...
-                [NSGraphicsContext setCurrentContext:context];                
                 [NSGraphicsContext saveGraphicsState];
-
+                [NSGraphicsContext setCurrentContext:context];
 
                 [firstRep drawInRect:rect];
 //                [@"QuickLook is using EagleView" drawInRect:rect withAttributes:nil];

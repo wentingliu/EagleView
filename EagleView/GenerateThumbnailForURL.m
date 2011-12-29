@@ -21,19 +21,37 @@ OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thum
             return noErr;
         }
         
-        // TODO: should choose appropriate rep according maxSize
-        NSBitmapImageRep *firstRep = [[image representations] objectAtIndex:0];
+        // find imageRep which has closed size to maxSize
+        __block NSBitmapImageRep *imageRep;
+        __block CGFloat closedSize; 
+        [[image representations] enumerateObjectsUsingBlock:^(NSBitmapImageRep *obj, NSUInteger idx, BOOL *stop) {
+            CGFloat (^getDifferenceOnSize)(NSBitmapImageRep *) = ^(NSBitmapImageRep *rep) {
+                CGFloat heightDiff = fabs([rep pixelsHigh] - maxSize.width);
+                CGFloat widthDiff = fabs([rep pixelsWide] - maxSize.height);
+                CGFloat difference = heightDiff - widthDiff > 0 ? heightDiff : widthDiff;
+                return difference;
+            };
+            if (imageRep == nil) {
+                imageRep = obj;
+                closedSize = getDifferenceOnSize(obj);
+            } else {
+                CGFloat diffSize = getDifferenceOnSize(obj);
+                if (diffSize < closedSize) {
+                    imageRep = obj;
+                    closedSize = diffSize;
+                }
+            }
+        }];
         
-        if ([firstRep colorSpace] == [NSColorSpace deviceRGBColorSpace]) {
+        if ([imageRep colorSpace] == [NSColorSpace deviceRGBColorSpace]) {
             ColorSyncProfileRef profile = ColorSyncProfileCreateWithName(kColorSyncSRGBProfile);
             CFErrorRef error;
             NSData *profileData = (__bridge NSData *)ColorSyncProfileCopyData (profile, &error);
             
             // Set the ColorSync profile for the object
-            [firstRep setProperty:NSImageColorSyncProfileData withValue:profileData];
+            [imageRep setProperty:NSImageColorSyncProfileData withValue:profileData];
         }
-        
-        // TODO: limit canvasSize to fit max size        
+           
         NSSize canvasSize = image.size;
         
         NSRect rect;
@@ -44,12 +62,11 @@ OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thum
             NSGraphicsContext* context = [NSGraphicsContext graphicsContextWithGraphicsPort:(void *)cgContext flipped:YES];
             if(context) {
                 //These two lines of code are just good safe programming...
-                [NSGraphicsContext setCurrentContext:context];                
                 [NSGraphicsContext saveGraphicsState];
+                [NSGraphicsContext setCurrentContext:context];
                 
-                
-                [firstRep drawInRect:rect];
-                //                [@"Q" drawInRect:rect withAttributes:nil];
+                [imageRep drawInRect:rect];
+//                [@"EagleView" drawInRect:rect withAttributes:nil];
                 
                 //This line sets the context back to what it was when we're done
                 [NSGraphicsContext restoreGraphicsState];
