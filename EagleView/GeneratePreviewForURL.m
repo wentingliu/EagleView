@@ -35,7 +35,7 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
             [firstRep setProperty:NSImageColorSyncProfileData withValue:profileData];
         }
         
-        NSSize canvasSize = image.size;
+        NSSize canvasSize = NSMakeSize([firstRep pixelsWide], [firstRep pixelsHigh]);
         
         NSRect rect;
         rect.origin = CGPointMake(0, 0);
@@ -44,14 +44,11 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
         if (cgContext) {
             NSGraphicsContext* context = [NSGraphicsContext graphicsContextWithGraphicsPort:(void *)cgContext flipped:YES];
             if(context) {
-                //These two lines of code are just good safe programming...
                 [NSGraphicsContext saveGraphicsState];
                 [NSGraphicsContext setCurrentContext:context];
 
                 [firstRep drawInRect:rect];
-//                [@"QuickLook is using EagleView" drawInRect:rect withAttributes:nil];
                 
-                //This line sets the context back to what it was when we're done
                 [NSGraphicsContext restoreGraphicsState];
             }
             
